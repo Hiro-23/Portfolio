@@ -82,7 +82,11 @@ img {
     padding: 20px;
     margin-top: 20px;
     color: #fff; /* テキストの色を白に設定（写真が暗い場合などに読みやすくするため） */
-    background-size: contain;
+    background-size: cover;
+}
+
+.contact1 h2.title {
+    color: black;
 }
 
 .site h1 a {
