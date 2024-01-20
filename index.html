@@ -59,14 +59,18 @@
                     function showSlides() {
                         const slides = document.getElementsByClassName("mySlides");
                         for (let i = 0; i < slides.length; i++) {
-                            slides[i].style.opacity = 0; // 初期化
+                            slides[i].style.visibility = "hidden"; // 初期化
                             if (i === slideIndex) {
-                                slides[i].style.display = "block";
-                                setTimeout(() => {
-                                    slides[i].style.opacity = 1;
+                                slides[i].style.visibility = "visible";
+                                slides[i].style.opacity = 0; // 初期化
+                                let opacity = 0;
+                                const fadeInInterval = setInterval(() => {
+                                    opacity += 0.1;
+                                    slides[i].style.opacity = opacity;
+                                    if (opacity >= 1) {
+                                        clearInterval(fadeInInterval);
+                                    }
                                 }, 100); // 徐々に透明度を上げる
-                            } else {
-                                slides[i].style.display = "none";
                             }
                         }
                         slideIndex = (slideIndex + 1) % slides.length;
