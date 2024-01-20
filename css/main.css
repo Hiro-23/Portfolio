@@ -42,12 +42,20 @@ body{
     width: 100%;
 }
 
+
+
 img {
     width: 70%;
     height: auto;
 }
 
-/* Navigation button styles */
+
+.mySlides img {
+    max-width: 70%;  
+    height: auto;     /* 高さを自動調整 */
+}
+
+
 .prev,
 .next {
     position: absolute;
