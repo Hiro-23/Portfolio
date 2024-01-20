@@ -93,13 +93,16 @@
                     }
                 
                     function plusSlides(n) {
-                        slideIndex = (slideIndex - n + slides.length) % slides.length; // 修正
+                        clearInterval(autoSlideInterval); // 自動スライドのカウントをリセット
+                        slideIndex = (slideIndex + n + slides.length) % slides.length;
                         showSlides();
+                        autoSlideInterval = setInterval(showSlides, 5000); // 5000ミリ秒（5秒）ごとにスライドを進める
                     }
                 
-                    setInterval(showSlides, 5000); // 5000ミリ秒（5秒）ごとにスライドを進める
+                    let autoSlideInterval = setInterval(showSlides, 5000); // 5000ミリ秒（5秒）ごとにスライドを進める
                     showSlides();
                 </script>
+                
                 
 
                 <div class="block" >
