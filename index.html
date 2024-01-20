@@ -90,9 +90,9 @@
                     }
                 
                     function plusSlides(n) {
+                        resetAutoSlideInterval();
                         slideIndex = (slideIndex + n + slides.length) % slides.length;
                         showSlides();
-                        resetAutoSlideInterval();
                     }
                 
                     function resetAutoSlideInterval() {
@@ -100,8 +100,19 @@
                         autoSlideInterval = setInterval(showSlides, 5000); // 新しいインターバルを設定
                     }
                 
+                    // 戻るボタンがクリックされたときの処理
+                    document.querySelector(".prev").addEventListener("click", function() {
+                        plusSlides(-1);
+                    });
+                
+                    // 進むボタンがクリックされたときの処理
+                    document.querySelector(".next").addEventListener("click", function() {
+                        plusSlides(1);
+                    });
+                
                     resetAutoSlideInterval(); // 初回の自動スライドの設定
                 </script>
+                
                 
                 
                 
