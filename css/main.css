@@ -49,13 +49,6 @@ img {
     height: auto;
 }
 
-
-.mySlides img {
-    max-width: 70%;  
-    height: auto;     /* 高さを自動調整 */
-}
-
-
 .prev,
 .next {
     position: absolute;
