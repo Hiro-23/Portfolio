@@ -58,6 +58,7 @@
                 <script>
                     let slideIndex = 0;
                     const slides = document.getElementsByClassName("mySlides");
+                    let autoSlideInterval; // 自動スライドのインターバルを格納する変数
                 
                     function showSlides() {
                         for (let i = 0; i < slides.length; i++) {
@@ -91,11 +92,17 @@
                     function plusSlides(n) {
                         slideIndex = (slideIndex + n + slides.length) % slides.length;
                         showSlides();
+                        resetAutoSlideInterval();
                     }
                 
-                    setInterval(showSlides, 5000); // 5000ミリ秒（5秒）ごとにスライドを進める
-                    showSlides();
+                    function resetAutoSlideInterval() {
+                        clearInterval(autoSlideInterval); // 現在のインターバルをクリア
+                        autoSlideInterval = setInterval(showSlides, 5000); // 新しいインターバルを設定
+                    }
+                
+                    resetAutoSlideInterval(); // 初回の自動スライドの設定
                 </script>
+                
                 
                 
                 
