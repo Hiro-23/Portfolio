@@ -22,40 +22,19 @@ body{
 }
 
 
-/* main.css */
 .slideshow-container {
-    position: relative;
     max-width: 100%;
-    margin: auto;
+    position: relative;
+    margin-top: 20px;
 }
 
 .mySlides {
     display: none;
-    max-width: 100%;
 }
 
 img {
     width: 100%;
-    height: auto;
-}
-
-/* Add styling for navigation arrows if needed */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    font-size: 20px;
-    color: white;
-    background-color: black;
-    border: none;
-    text-align: center;
-    cursor: pointer;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    max-width: 600px; /* Adjust the maximum width as needed */
 }
 
 
