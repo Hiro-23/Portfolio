@@ -79,11 +79,10 @@
                 
                         function updateOpacity() {
                             opacity += increment;
+                            element.style.opacity = opacity;
                             if (opacity >= 1) {
-                                opacity = 1;
                                 clearInterval(fadeInterval);
                             }
-                            element.style.opacity = opacity;
                         }
                 
                         const fadeInterval = setInterval(updateOpacity, interval);
@@ -97,6 +96,7 @@
                     setInterval(showSlides, 5000); // 5000ミリ秒（5秒）ごとにスライドを進める
                     showSlides();
                 </script>
+                
                 
                 
 
