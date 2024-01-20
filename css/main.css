@@ -39,12 +39,7 @@ body{
 
 .mySlides {
     display: none;
-    width: 100%;
-}
-
-img {
-    width: 100%;
-    height: auto;
+    text-align: center; /* 画像を中央に配置するためのスタイルを追加 */
 }
 
 .mySlides img {
