@@ -167,16 +167,6 @@ body{
     color:blue;
 }
 
-.Box {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.block-50 {
-    width: 48%;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-}
 
 @keyframes fadeIn{
 	0%{
@@ -213,9 +203,7 @@ body{
         width:auto
     }
     .Box{
-        flex-direction: column;
         width: 100%;
-        
     }
     
     .content{
