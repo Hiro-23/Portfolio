@@ -278,6 +278,10 @@ img {
         display: block;
         clear: both
     }
+    
+    .contact1 {
+        background-position: right top; /* スマートフォン用の位置指定 */
+    }
 
     .footer {
         width: 100vh;
