@@ -24,11 +24,16 @@ body {
 
 .topvideo {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left: 0;
     transform: translate(-50%, -50%);
     width: 100%;
     height: auto;
+}
+
+.Header {
+    position: relative;
+    z-index: 1;
 }
 
 .slideshow-container {
@@ -36,6 +41,8 @@ body {
     position: relative;
     margin-top: 20px;
     overflow: hidden; /* 追加 */
+    position: relative;
+    z-index: 2;
 }
 
 .mySlides {
