@@ -14,7 +14,7 @@ body{
     box-shadow: 0px 5px 15px #9d9592;
     animation: fadeIn 5s linear;
     animation-fill-mode: both;
-    z-index: 2;
+    z-index: 10;
 }
 .topimg{
     z-index: 1;
