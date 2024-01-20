@@ -64,14 +64,29 @@
                             slides[i].style.opacity = 0; // 初期化
                             if (i === slideIndex) {
                                 slides[i].style.display = "block";
-                                setTimeout(() => {
-                                    slides[i].style.opacity = 1;
-                                }, 100); // 徐々に透明度を上げる
+                                fadeIn(slides[i]);
                             } else {
                                 slides[i].style.display = "none";
                             }
                         }
                         slideIndex = (slideIndex + 1) % slides.length;
+                    }
+                
+                    function fadeIn(element) {
+                        let opacity = 0;
+                        const increment = 0.05; // 透明度の変化量
+                        const interval = 50; // 変化の間隔（ミリ秒）
+                
+                        function updateOpacity() {
+                            opacity += increment;
+                            if (opacity >= 1) {
+                                opacity = 1;
+                                clearInterval(fadeInterval);
+                            }
+                            element.style.opacity = opacity;
+                        }
+                
+                        const fadeInterval = setInterval(updateOpacity, interval);
                     }
                 
                     function plusSlides(n) {
@@ -82,6 +97,7 @@
                     setInterval(showSlides, 5000); // 5000ミリ秒（5秒）ごとにスライドを進める
                     showSlides();
                 </script>
+                
                 
 
                 <div class="block" >
