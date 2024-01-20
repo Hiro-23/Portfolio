@@ -139,10 +139,15 @@ body{
     box-sizing: border-box;
 }
 
-.row {
+.Box {
     display: flex;
-    width: 100%;
-    justify-content: space-between; /* 要素間を均等に配置 */
+    flex-wrap: wrap;
+}
+
+.block-50 {
+    width: 48%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
 
