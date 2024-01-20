@@ -83,7 +83,7 @@ img {
     margin-top: 20px;
     color: #fff;
     text-align: right;
-    background-position: right;
+    background-position: right 500px;
     width: 100%;
     background-size: cover; 
 }
