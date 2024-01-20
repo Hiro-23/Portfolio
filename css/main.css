@@ -229,6 +229,10 @@ img {
 
 }
 
+.title {
+    color: black;
+}
+
 .contact-set {
     display: inline-block;
     box-sizing: border-box;
