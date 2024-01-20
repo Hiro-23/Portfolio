@@ -38,7 +38,8 @@ body{
 
 .mySlides {
     display: none;
-    width: 100%;
+    max-width: 70%; /* 画像の最大幅を調整 */
+    margin: 0 auto; /* 中央寄せ */
 }
 
 img {
