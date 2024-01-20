@@ -93,7 +93,7 @@
                     }
                 
                     function plusSlides(n) {
-                        slideIndex = (slideIndex + n + slides.length) % slides.length;
+                        slideIndex = (slideIndex - n + slides.length) % slides.length; // 修正
                         showSlides();
                     }
                 

@@ -22,7 +22,10 @@ body{
 }
 
 
-/* style.css */
+.topvideo {
+    width: 100%;
+    height: auto;
+}
 
 .slideshow-container {
     max-width: 100%;
