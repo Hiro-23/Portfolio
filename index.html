@@ -50,36 +50,35 @@
                         <img src="img/slide3.jpg" alt="Slide 3">
                     </div>
                 
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <a class="prev" onclick="plusSlides(-1)"><i class="fas fa-chevron-left"></i></a>
+                    <a class="next" onclick="plusSlides(1)"><i class="fas fa-chevron-right"></i></a>
                 </div>
                 
                 <script>
                     let slideIndex = 0;
-                
                     function showSlides() {
-                        let i;
                         const slides = document.getElementsByClassName("mySlides");
-                        for (i = 0; i < slides.length; i++) {
-                            slides[i].style.display = "none";
+                        for (let i = 0; i < slides.length; i++) {
+                            slides[i].style.opacity = 0; // 初期化
+                            if (i === slideIndex) {
+                                slides[i].style.display = "block";
+                                setTimeout(() => {
+                                    slides[i].style.opacity = 1;
+                                }, 100); // 徐々に透明度を上げる
+                            } else {
+                                slides[i].style.display = "none";
+                            }
                         }
-                        slideIndex++;
-                        if (slideIndex > slides.length) { slideIndex = 1 }
-                        slides[slideIndex - 1].style.display = "block";
+                        slideIndex = (slideIndex + 1) % slides.length;
                     }
-                
                     function plusSlides(n) {
-                        showSlides(slideIndex += n);
-                    }
-                
-                    function autoSlide() {
+                        slideIndex = (slideIndex + n + slides.length) % slides.length;
                         showSlides();
                     }
-                
-                    // 初期表示と自動スライド設定
-                    setInterval(autoSlide, 3000);
+                    setInterval(showSlides, 5000);
                     showSlides();
                 </script>
+            
 
                 <div class="block" >
                     <p>はじめまして。<br>中京大学 工学部 情報工学科3年 小嶋 大翔です。</p>
