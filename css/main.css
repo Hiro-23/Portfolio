@@ -139,6 +139,13 @@ body{
     box-sizing: border-box;
 }
 
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* 要素間を均等に配置 */
+}
+
+
 
 .footer{
     
