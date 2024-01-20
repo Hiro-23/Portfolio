@@ -74,7 +74,12 @@
                         }
                         slides[slideIndex - 1].style.display = "block";
                     }
+                    // 自動でスライドを進める処理
+                    setInterval(function () {
+                        plusSlides(1);
+                    }, 5000); // 5000ミリ秒（5秒）ごとにスライドを進める
                 </script>
+                
                 
 
                 <div class="block" >
