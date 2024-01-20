@@ -68,11 +68,11 @@
                             slides[i].style.opacity = 0; // 初期化
                             if (i === slideIndex) {
                                 slides[i].style.display = "block";
-                                fadeIn(slides[i]);
                             } else {
                                 slides[i].style.display = "none";
                             }
                         }
+                        fadeIn(slides[slideIndex]);
                         slideIndex = (slideIndex + 1) % slides.length;
                     }
                 
@@ -92,23 +92,25 @@
                         const fadeInterval = setInterval(updateOpacity, interval);
                     }
                 
-                    function plusSlides(n) {
+                    function changeSlides(direction) {
                         clearInterval(autoSlideInterval); // 自動スライドのカウントをリセット
-                        slideIndex = (slideIndex + n + slides.length) % slides.length;
+                        slideIndex = (slideIndex + direction + slides.length) % slides.length;
                         showSlides();
                         autoSlideInterval = setInterval(showSlides, 5000); // 5000ミリ秒（5秒）ごとにスライドを進める
                     }
                 
+                    function plusSlides(n) {
+                        changeSlides(n);
+                    }
+                
                     function minusSlides(n) {
-                        clearInterval(autoSlideInterval); // 自動スライドのカウントをリセット
-                        slideIndex = (slideIndex - n + slides.length) % slides.length;
-                        showSlides();
-                        autoSlideInterval = setInterval(showSlides, 5000); // 5000ミリ秒（5秒）ごとにスライドを進める
+                        changeSlides(-n);
                     }
                 
                     let autoSlideInterval = setInterval(showSlides, 5000); // 5000ミリ秒（5秒）ごとにスライドを進める
                     showSlides();
                 </script>
+                
                 
                 
                 
