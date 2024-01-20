@@ -84,8 +84,7 @@ img {
     color: #fff;
     text-align: center;
     background-position: center;
-    width: 100%;
-    background-size: 100% auto; /* 幅いっぱいに広げる */
+    background-size:500px;
 }
 
 .contact1 h2.title {
