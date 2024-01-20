@@ -77,7 +77,8 @@ img {
     border-radius: 0 5px 5px 0;
 } */
 
-.contact1 {
+
+/*.contact1 {
     background: url('../img/circle.png') center/cover no-repeat; 
     padding: 20px;
     margin-top: 20px;
@@ -86,7 +87,7 @@ img {
     background-position: center;
     width: 100%;
     background-size: cover; 
-}
+}*/
 
 .contact1 h2.title {
     color: black;
@@ -146,6 +147,11 @@ img {
 
 .container {
     text-align: center;
+}
+
+#contact{
+    text-align: center;
+    background-image: url('../img/circle.png') center/cover no-repeat; 
 }
 
 #works {
@@ -278,7 +284,7 @@ img {
         display: block;
         clear: both
     }
-    
+
     .contact1 {
         background-position: right top; /* スマートフォン用の位置指定 */
     }
