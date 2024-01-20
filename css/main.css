@@ -7,7 +7,7 @@ body{
 .top{
     background-color: rgba(255, 255, 255, 0.9);
     width: 100%;
-    position: relative;
+    position: fixed;
     content: "";
     display: block;
     clear:both;
@@ -17,20 +17,15 @@ body{
     z-index: 2;
 }
 .topimg{
-    position: relative; 
     z-index: 1;
     opacity: 0.6;
 }
 
-
-.topvideo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.topvideo{
     width: 100%;
     height: auto;
 }
+/* style.css */
 
 .slideshow-container {
     max-width: 100%;
@@ -40,15 +35,15 @@ body{
 
 .mySlides {
     display: none;
-    text-align: center; /* 画像を中央に配置するためのスタイルを追加 */
+    width: 100%;
 }
 
 img {
-    max-width: 80%;  /* 画像の最大幅を80%に設定 */
-    height: auto;   /* 高さを自動調整 */
-    margin-top: 40px;
+    width: 100%;
+    height: auto;
 }
 
+/* Navigation button styles */
 .prev,
 .next {
     position: absolute;
@@ -277,5 +272,3 @@ img {
         box-sizing: border-box;
     }
 }
-
-

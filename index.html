@@ -54,8 +54,8 @@
                         <img src="img/slide3.jpg" alt="Slide 3">
                     </div>
 
-                    <a class="prev" onclick="plusSlides(-1)"><i class="fas fa-chevron-left"></i></a>
-                    <a class="next" onclick="plusSlides(1)"><i class="fas fa-chevron-right"></i></a>
+                    <!-- <a class="prev" onclick="plusSlides(-1)"><i class="fas fa-chevron-left"></i></a> -->
+                    <!-- <a class="next" onclick="plusSlides(1)"><i class="fas fa-chevron-right"></i></a> -->
                 </div>
 
 
@@ -92,20 +92,21 @@
                         const fadeInterval = setInterval(updateOpacity, interval);
                     }
                 
-                    function changeSlides(direction) {
-                        clearInterval(autoSlideInterval); // 自動スライドのカウントをリセット
-                        slideIndex = (slideIndex + direction + slides.length) % slides.length;
-                        showSlides();
-                        autoSlideInterval = setInterval(showSlides, 5000); // 5000ミリ秒（5秒）ごとにスライドを進める
-                    }
+                    // ボタン関連の処理をコメントアウト
+                    // function changeSlides(direction) {
+                    //     clearInterval(autoSlideInterval); // 自動スライドのカウントをリセット
+                    //     slideIndex = (slideIndex + direction + slides.length) % slides.length;
+                    //     showSlides();
+                    //     autoSlideInterval = setInterval(showSlides, 5000); // 5000ミリ秒（5秒）ごとにスライドを進める
+                    // }
                 
-                    function plusSlides(n) {
-                        changeSlides(n);
-                    }
+                    // function plusSlides(n) {
+                    //     changeSlides(n);
+                    // }
                 
-                    function minusSlides(n) {
-                        changeSlides(-n);
-                    }
+                    // function minusSlides(n) {
+                    //     changeSlides(-n);
+                    // }
                 
                     let autoSlideInterval = setInterval(showSlides, 5000); // 5000ミリ秒（5秒）ごとにスライドを進める
                     showSlides();
