@@ -152,6 +152,8 @@ img {
 #contact{
     text-align: center;
     background-image: url(../img/circle.png); 
+    background-position: center;
+    background-size: 100% auto; 
 }
 
 #works {
