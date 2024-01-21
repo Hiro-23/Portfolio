@@ -151,7 +151,7 @@ img {
 
 #contact{
     text-align: center;
-    background-image: url('../img/circle.png') center/cover no-repeat; 
+    background: url(../img/circle.png) center/cover no-repeat; 
 }
 
 #works {
