@@ -287,10 +287,6 @@ img {
         clear: both
     }
 
-    .contact1 {
-        background-position: right top; /* スマートフォン用の位置指定 */
-    }
-
     .footer {
         width: 100vh;
     }
@@ -318,6 +314,10 @@ img {
     }
 
     .content {
+        width: 100vh;
+    }
+    
+    #contact{
         width: 100vh;
     }
 
